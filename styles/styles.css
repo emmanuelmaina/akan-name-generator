@@ -1,0 +1,59 @@
+body {
+    background-color: rgba(227, 227, 23, 0.311);
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: Poetsen One;
+    font-style: normal;
+    color: gold;
+    border: 5px solid ;
+    border-radius: 100px;
+    background-color: cadetblue;
+}
+form {
+    background-color: aqua;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 30px;         
+}
+.input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    color: deeppink;
+    background-color: burlywood;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 20px;
+    border:2px solid forestgreen;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+button:hover {
+    background-color: rgba(128, 128, 128, 0.664);
+    font-size: 1.7em;
+}
+label {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
