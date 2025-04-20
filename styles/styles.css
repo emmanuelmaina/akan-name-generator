@@ -44,6 +44,16 @@ label {
     font-weight: 900;
     font-size: 20px;
 }
+#result {
+    font-weight: bold;
+    font-size: 3em;
+    background-color: thistle;
+}
+.inp {
+    
+    text-align: center;
+
+}
 
 
 
