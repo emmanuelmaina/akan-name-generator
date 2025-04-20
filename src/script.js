@@ -11,29 +11,51 @@ function generate() {
         
 }
     */
-const birthDate = document.getElementById("birthDate");
-const gender = document.getElementById("gender");
-const result = document.getElementById("result");
+//const birthDate = document.getElementById("birthDate");
+//const gender = document.querySelector('input[name="gender"]:checked');
+//const male = document.getElementById("male");
+//const female = document.getElementById("female");
+//const result = document.getElementById("result");
 
 
 const form = document.getElementById("form")
-form.addEventListener("submit",function(event){
+form.addEventListener("submit", function (event) {
     event.preventDefault()
 
-    
-     const birthDate = document.getElementById("birthDate").value;
-     const [year, month, day] = birthDate.toString().split("-").map(Number)
-    
-     let CC = Math.floor(year / 100);
-     let YY = year % 100;
-     let MM = month;
-     let DD = day;
-     let d = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY) / 4) + ((26 * (MM + 1)) / 10) + DD) % 7);
-     
-     
-     
 
-} )
+    const birthDate = document.getElementById("birthDate").value;
+    const [year, month, day] = birthDate.toString().split("-").map(Number)
+
+    let CC = Math.floor(year / 100);
+    let YY = year % 100;
+    let MM = month;
+    let DD = day;
+    let d = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY) / 4) + ((26 * (MM + 1)) / 10) + DD) % 7);
+
+    if (MM < 1 || MM > 12 || DD < 1 || DD > 31) {
+        alert("Please enter a valid date.");
+        return;
+    }
+
+    const gender = document.querySelector('input[name="gender"]:checked');
+
+    if (!birthDate || !gender) {
+        alert("Fill in missing information!")
+        return;
+    }
+
+    const dayOfWeek = d;
+
+    const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
+    const FemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+
+    const akanName = gender.value === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+
+    document.getElementById("result").textContent = `Your Akan name is ${akanName}!`;
+
+
+
+})
 /*
 console.log(d)
 let form = document.getElementById("form");

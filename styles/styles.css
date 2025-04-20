@@ -48,6 +48,7 @@ label {
     font-weight: bold;
     font-size: 3em;
     background-color: thistle;
+    border-radius: 20px;
 }
 .inp {
     
