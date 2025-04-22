@@ -55,6 +55,12 @@ h4 {
     display: flex;
     justify-content: center;
     font-size: 2em;
+    color: hsl(0, 100%, 45%);
+}
+p {
+    font-family: Poetsen One;
+    text-align: center;
+    color: black;
 }
 
 
