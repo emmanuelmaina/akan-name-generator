@@ -12,7 +12,7 @@ form.addEventListener("submit", function (event) {
     let YY = year % 100;
     let MM = month;
     let DD = day;
-    let d = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY) / 4) + ((26 * (MM + 1)) / 10) + DD) % 7);
+    let dayOfWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY) / 4) + ((26 * (MM + 1)) / 10) + DD) % 7);
 
     if (MM < 1 || MM > 12 || DD < 1 || DD > 31) {
         alert("Please enter a valid date.");
@@ -26,7 +26,7 @@ form.addEventListener("submit", function (event) {
         return;
     }
 
-    const dayOfWeek = d;
+    
 
     const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
     const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
