@@ -26,14 +26,18 @@ form.addEventListener("submit", function (event) {
         return;
     }
 
-    
+
 
     const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
     const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
 
-    const akanName = gender.value === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
-
-    
+    //const akanName = gender.value === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+    let akanName;
+    if (gender.value === "male") {
+        akanName = maleNames[dayOfWeek]
+    } else {
+        akanName = femaleNames[dayOfWeek]
+    }
 
     document.getElementById("result").textContent = `Your Akan name is ${akanName}!`;
 
