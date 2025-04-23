@@ -1,9 +1,6 @@
-
-
 const form = document.getElementById("form")
 form.addEventListener("submit", function (event) {
     event.preventDefault()
-
 
     const birthDate = document.getElementById("birthDate").value;
     const [year, month, day] = birthDate.toString().split("-").map(Number)
@@ -26,12 +23,10 @@ form.addEventListener("submit", function (event) {
         return;
     }
 
-
-
     const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
     const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
 
-    //const akanName = gender.value === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+   
     let akanName;
     if (gender.value === "male") {
         akanName = maleNames[dayOfWeek]
